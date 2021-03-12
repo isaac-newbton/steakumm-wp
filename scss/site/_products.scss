@@ -1,0 +1,208 @@
+.product-list {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.single-product {
+  .other-products {
+    margin-bottom: 50px;
+
+    @media screen and (min-width: $medium) {
+      display: flex;
+      justify-content: center;
+    }
+
+    @media screen and (max-width: $medium) {
+      figure {
+        max-width: 220px;
+
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+      }
+    }
+
+    @media screen and (max-width: $small) {
+      .figure {
+        max-width: 200px;
+      }
+
+      .item figure img {
+        height: auto;
+        max-width: 200px;
+        margin: 0 auto;
+      }
+    }
+
+    .item:nth-child(2) {
+      margin: 0 80px;
+
+      @media screen and (max-width: $medium) {
+        margin: 0;
+      }
+    }
+
+    figcaption {
+      text-align: center;
+      max-width: 240px;
+      margin: 10px auto 0;
+      text-transform: uppercase;
+
+      @media screen and (max-width: $small) {
+        max-width: 200px;
+      }
+    }
+
+    figcaption a {
+      text-decoration: none;
+      color: white;
+      font-family: $franklin-con;
+      font-weight: bold;
+      font-size: 30px;
+
+      @media screen and (max-width: $medium) {
+        font-size: 25px;
+      }
+
+      @media screen and (max-width: $small) {
+        font-size: 20px;
+      }
+    }
+
+    figure:hover a {
+      color: $red;
+    }
+  }
+
+  .tagline {
+    text-align: center;
+    margin: 80px 0 40px;
+
+    h2 {
+      font-family: $franklin-con;
+      font-weight: bold;
+      font-size: 70px;
+      line-height: 60px;
+      margin: 0;
+
+      @media screen and (max-width: $small) {
+        font-size: 40px;
+        line-height: 35px;
+      }
+
+      span {
+        color: $red;
+      }
+    }
+  }
+
+  .product-summary {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+
+    @media screen and (max-width: $small) {
+      flex-flow: column;
+
+      figure {
+        margin: 0 20px;
+        text-align: center;
+
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  .product-info {
+    h1 {
+      max-width: 450px;
+      font-family: $franklin-con;
+      font-size: 55px;
+      line-height: 45px;
+      margin-bottom: 15px;
+
+      @media screen and (max-width: $small) {
+        font-size: 40px;
+        line-height: 35px;
+        margin: 15px auto;
+      }
+    }
+
+    @media screen and (max-width: $small) {
+      margin: 0 20px;
+      text-align: center;
+
+      p {
+        font-size: 17px;
+      }
+    }
+  }
+
+  .description {
+    color: $red;
+    font-weight: bold;
+    font-size: 22px;
+    max-width: 600px;
+
+    p {
+      margin: 10px 0 0;
+      font-weight: normal;
+    }
+
+    button {
+      border: 0;
+      border-radius: 10px;
+      background-color: $red;
+      color: white;
+      padding: 10px 15px;
+      margin-top: 15px;
+      outline: none;
+      cursor: pointer;
+
+      .fa-caret-right,
+      .fa-caret-down {
+        display: none;
+
+        &.active {
+          display: inline-block !important;
+        }
+      }
+    }
+  }
+
+  .nutrition {
+    color: white;
+    font-weight: normal;
+    font-family: $franklin;
+    list-style-type: none;
+    margin: 20px 0;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+    text-align: left;
+
+    &.active {
+      max-height: 700px;
+    }
+
+    h3 {
+      margin: 40px 0 20px;
+      font-family: $franklin-con;
+      font-size: 28px;
+    }
+
+    li {
+      font-size: 18px;
+      max-width: 500px;
+    }
+
+    span {
+      float: right;
+    }
+  }
+}

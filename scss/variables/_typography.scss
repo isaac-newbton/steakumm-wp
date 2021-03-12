@@ -1,0 +1,47 @@
+// Font variables
+$franklin: 'Franklin Gothic', Arial, sans-serif;
+$franklin-con: 'Franklin Gothic Condensed', Arial, sans-serif;
+
+@font-face {
+  font-family: 'Franklin Gothic';
+  src: url('media/webfonts/FranklinGothic-Demi.eot');
+  src: url('media/webfonts/FranklinGothic-Demi.eot?#iefix') format('embedded-opentype'),
+  url('media/webfonts/FranklinGothic-Demi.woff') format('woff'),
+  url('media/webfonts/FranklinGothic-Demi.ttf') format('truetype'),
+  url('media/webfonts/FranklinGothic-Demi.svg#argoneregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Franklin Gothic';
+  src: url('media/webfonts/FranklinGothic-Heavy.eot');
+  src: url('media/webfonts/FranklinGothic-Heavy.eot?#iefix') format('embedded-opentype'),
+  url('media/webfonts/FranklinGothic-Heavy.woff') format('woff'),
+  url('media/webfonts/FranklinGothic-Heavy.ttf') format('truetype'),
+  url('media/webfonts/FranklinGothic-Heavy.svg#argoneregular') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Franklin Gothic Condensed';
+  src: url('media/webfonts/FranklinGothicCon-BookConSC.eot');
+  src: url('media/webfonts/FranklinGothicCon-BookConSC.eot?#iefix') format('embedded-opentype'),
+  url('media/webfonts/FranklinGothicCon-BookConSC.woff') format('woff'),
+  url('media/webfonts/FranklinGothicCon-BookConSC.ttf') format('truetype'),
+  url('media/webfonts/FranklinGothicCon-BookConSC.svg#argoneregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Franklin Gothic Condensed';
+  src: url('media/webfonts/FranklinGothic-DemiCnd.eot');
+  src: url('media/webfonts/FranklinGothic-DemiCnd.eot?#iefix') format('embedded-opentype'),
+  url('media/webfonts/FranklinGothic-DemiCnd.woff') format('woff'),
+  url('media/webfonts/FranklinGothic-DemiCnd.ttf') format('truetype'),
+  url('media/webfonts/FranklinGothic-DemiCnd.svg#argoneregular') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}

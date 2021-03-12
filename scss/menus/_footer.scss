@@ -1,0 +1,43 @@
+.site-footer {
+  background-image: url('media/images/bg-footer.jpg');
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+
+  .custom-logo {
+    margin: -20px 0 25px;
+
+    @media screen and (max-width: $small) {
+      max-height: 120px;
+      width: auto;
+    }
+  }
+}
+
+.footer-navigation {
+  width: 350px;
+
+  @media screen and (max-width: $small) {
+    width: 100%;
+  }
+
+  #menu-footer {
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: $small) {
+      flex-flow: column;
+      text-align: center;
+    }
+  }
+
+  .menu > li > a {
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    @media screen and (max-width: $small) {
+      font-size: 25px;
+    }
+  }
+}

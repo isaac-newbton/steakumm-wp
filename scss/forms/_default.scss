@@ -1,0 +1,55 @@
+// Default settings for all forms
+
+form {
+  input,
+  select {
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 5px;
+    border: 0;
+    padding: 8px;
+    -webkit-appearance:none;
+    -moz-appearance: none;
+    appearance: none;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  select {
+    padding-right: 30px;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(45deg, transparent 50%, currentColor 50%), linear-gradient(135deg, currentColor 50%, transparent 50%);
+    background-position: right 15px top 1em, right 10px top 1em;
+    background-size: 5px 5px, 5px 5px;
+  }
+}
+
+// Contact Form 7 styling
+.wpcf7 {
+  margin: 20px auto;
+
+  input {
+    border: 1px solid black;
+
+    &[type="submit"] {
+      display: block;
+      width: auto;
+      cursor: pointer;
+      margin: 0 auto;
+    }
+  }
+
+  textarea {
+    width: 100%;
+    box-sizing: border-box;
+    resize: none;
+    padding: 8px;
+    border-radius: 8px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

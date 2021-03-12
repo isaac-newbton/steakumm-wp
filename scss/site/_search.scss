@@ -1,0 +1,30 @@
+.search-results:not(.post-type-archive) {
+  .search-results-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 20px;
+
+    @media screen and (max-width: $small) {
+      display: flex;
+      flex-flow: column;
+      margin: 50px 15px 20px;
+    }
+  }
+
+  article {
+    h1 {
+      font-size: 25px;
+      margin-bottom: 0;
+    }
+
+    h2 {
+      font-size: 15px;
+      margin: 0 0 10px;
+    }
+
+    .wp-post-image {
+      max-height: 200px;
+      width: auto;
+    }
+  }
+}

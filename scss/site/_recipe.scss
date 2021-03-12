@@ -1,0 +1,291 @@
+.single-recipe {
+  .site-main {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-top: 100px;
+
+    @media screen and (max-width: $medium) {
+      margin: 50px 20px 0;
+    }
+
+    @media screen and (max-width: $small) {
+      flex-flow: column;
+      margin: 25px 10px 0;
+    }
+
+    @media print {
+      flex-flow: column;
+      margin-top: 0;
+    }
+  }
+
+  .recipe-img {
+    margin: 0 40px 0 0;
+
+    @media screen and (max-width: $small) {
+      margin: 0;
+    }
+
+    & > figure {
+      margin: 0;
+      padding: 0;
+      border-radius: 20px;
+      overflow: hidden;
+      width: 650px;
+
+      @media screen and (max-width: $small) {
+        width: 100%;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      @media print {
+        width: 400px;
+      }
+    }
+
+    .related-product {
+      display: flex;
+      margin-top: 20px;
+
+      & > figure {
+        margin: 0 20px 0 0;
+
+        img {
+          max-width: 300px;
+
+          @media screen and (max-width: $small) {
+            width: 150px;
+          }
+        }
+      }
+
+      h3 {
+        max-width: 180px;
+        font-family: $franklin-con;
+        font-weight: bold;
+        font-size: 25px;
+        line-height: 23px;
+        margin: 15px 0;
+
+        @media screen and (max-width: $small) {
+          margin: 10px 0;
+          font-size: 22px;
+        }
+      }
+    }
+  }
+
+  .recipe-info {
+    width: 600px;
+
+    @media screen and (max-width: $small) {
+      width: 100%;
+    }
+
+    h1 {
+      margin: 0 0 5px;
+      font-family: $franklin-con;
+      font-weight: normal;
+      font-size: 35px;
+      line-height: 30px;
+
+      @media screen and (max-width: $small) {
+        margin: 10px 0;
+      }
+    }
+
+    .print-btn {
+      background-color: transparent;
+      color: white;
+      border: 0;
+      cursor: pointer;
+      float: right;
+      font-size: 25px;
+
+      @media screen and (max-width: $small) {
+        margin-top: -40px;
+      }
+
+      &:hover {
+        color: $red;
+      }
+    }
+
+    .ingreds ul {
+      margin: 0 0 20px;
+      padding: 0;
+      list-style-type: none;
+    }
+  }
+
+  @media screen and (max-width: $small) {
+    .recipe-popup .container {
+      padding: 0;
+    }
+  }
+
+  .recipe-back {
+    display: block;
+    margin: 40px auto 100px;
+    font-size: 20px;
+    padding: 8px 15px 5px;
+    width: max-content;
+  }
+}
+
+.post-type-archive-recipe {
+  .recipe-grid {
+    display: grid;
+    $gridsize-lg: 300px;
+    grid-template-columns: $gridsize-lg $gridsize-lg $gridsize-lg $gridsize-lg;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    max-width: 100%;
+    padding-bottom: 50px;
+    $gridsize-sm: 160px;
+
+    @media screen and (max-width: $small) {
+      grid-template-columns: $gridsize-sm $gridsize-sm;
+      grid-column-gap: 10px;
+      grid-row-gap: 10px;
+      justify-content: center;
+    }
+
+    .recipe-thumb {
+      width: 300px;
+      height: 300px;
+      margin: 0;
+      overflow: hidden;
+      background-position: top center;
+      background-size: cover;
+      border-radius: 15px;
+
+      @media screen and (max-width: $small) {
+        width: 150px;
+        height: 150px;
+      }
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    h2 {
+      text-align: center;
+      margin: 10px 0 0;
+      font-family: $franklin-con;
+
+      @media screen and (max-width: $small) {
+        font-size: 20px;
+      }
+
+      a {
+        color: white;
+        text-decoration: none;
+      }
+    }
+
+    .type-recipe:hover h2 > a {
+      color: $red;
+    }
+  }
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    max-width: 600px;
+    margin: 0 auto 100px;
+
+    & > * {
+      margin: 0 10px;
+    }
+
+    a,
+    span {
+      color: white;
+      font-size: 25px;
+      line-height: 38px;
+
+      &.current {
+        color: $red;
+      }
+    }
+
+    a:hover {
+      color: $red;
+      text-decoration: none;
+    }
+
+    .next,
+    .prev {
+      font-size: 35px;
+    }
+  }
+
+  .site-main > .search-form {
+    display: flex;
+    justify-content: center;
+    margin: 50px auto 25px;
+
+    @media screen and (max-width: $small) {
+      flex-flow: row wrap;
+      justify-content: left;
+      margin-top: 25px;
+
+      select,
+      input,
+      button {
+        background-color: $red;
+        color: white;
+      }
+    }
+
+    & > * {
+      margin: 0 10px;
+      max-width: 180px;
+
+      @media screen and (max-width: $small) {
+        margin-bottom: 5px;
+      }
+    }
+
+    .search-input {
+      position: relative;
+
+      @media screen and (max-width: $small) {
+        max-width: 100%;
+      }
+    }
+
+    .fa-search {
+      color: black;
+      position: absolute;
+      left: 5px;
+      top: 7px;
+      font-size: 20px;
+
+      @media screen and (max-width: $small) {
+        color: white;
+      }
+    }
+
+    .search-field {
+      width: 200px;
+      padding-left: 30px;
+
+      @media screen and (max-width: $small) {
+        width: 100%;
+      }
+    }
+
+    .search-submit {
+      width: 100px;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.social-navigation {
+  max-width: 400px;
+  margin: 10px auto 80px;
+
+  .menu > li > a {
+    font-size: 12px;
+
+    @media screen and (max-width: $small) {
+      font-size: 10px;
+    }
+  }
+}

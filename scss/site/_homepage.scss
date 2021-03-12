@@ -1,0 +1,513 @@
+//Homepage styling
+.home {
+  #homepage-videos {
+    position: relative;
+
+    .item {
+      background-color: black;
+    }
+
+    .video-wrapper {
+      display: block;
+      width: 100vw;
+      margin-bottom: -5px;
+
+      video {
+        width: 100%;
+      }
+    }
+
+    .owl-dots {
+      position: absolute;
+      bottom: 15px;
+      left: 0;
+      right: 0;
+
+      .owl-dot {
+        outline: none;
+      }
+
+      .owl-dot span {
+        width: 35px;
+        height: 35px;
+        margin: 5px 10px;
+
+        @media screen and (max-width: $small) {
+          width: 25px;
+          height: 25px;
+        }
+      }
+
+      .owl-dot.active span {
+        background: $red;
+      }
+    }
+  }
+
+  .wp-block-group {
+    padding: 5px 0;
+
+    .wp-block-group__inner-container  > h2 {
+      font-weight: bold;
+      font-size: 60px;
+      font-family: $franklin-con;
+      margin: 45px auto 15px;
+    }
+  }
+
+  .section-product-list {
+    background-image: url('media/images/bg-section.jpg');
+    padding: 5px 0;
+
+    @media screen and (max-width: $small) {
+      padding: 5px 0 0;
+
+      .wp-block-group__inner-container {
+        padding: 0;
+      }
+    }
+
+    .products > .wp-block-group__inner-container {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-around;
+      max-width: 1200px;
+      margin: 0 auto;
+
+      @media screen and (max-width: $small) {
+        flex-flow: column;
+
+        .wp-block-image {
+          text-align: center;
+        }
+      }
+
+      figcaption {
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px;
+
+        @media screen and (max-width: $small) {
+          font-size: 16px;
+        }
+
+        a {
+          text-decoration: none;
+          color: white;
+          text-transform: uppercase;
+        }
+      }
+
+      .wp-block-image {
+        margin: 0;
+
+        .figcaption {
+          margin-top: -30px;
+        }
+      }
+
+      figure a img {
+        padding: 35px 10px;
+      }
+
+      figure:hover a {
+        color: $offblack;
+
+        img {
+          filter: brightness(1.3) drop-shadow(0 0 20px #fff);
+        }
+      }
+    }
+  }
+
+  .section-social {
+    @media screen and (max-width: $small) {
+      padding-bottom: 0;
+
+      .wp-block-group__inner-container {
+        padding: 0 5px;
+      }
+    }
+
+    .social-menu {
+      @media screen and (max-width: $small) {
+        padding-bottom: 0;
+      }
+
+      .wp-block-group__inner-container {
+        margin: 0 auto;
+        max-width: 350px;
+        position: relative;
+
+        .menu li a {
+          font-size: 12px;
+          color: $red;
+
+          .fa-inverse {
+            color: $offblack;
+          }
+
+          &:hover {
+            color: white;
+
+            .fa-inverse {
+              color: $red;
+            }
+          }
+        }
+      }
+
+      .cartoon-head {
+        position: absolute;
+        right: -170px;
+        bottom: -31px;
+
+        @media screen and (max-width: $small) {
+          position: static;
+          margin: 0 auto;
+
+          img {
+            display: block;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+  }
+
+  .social-feed {
+    .wp-block-group__inner-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      flex-flow: row;
+      justify-content: center;
+
+      @media screen and (max-width: $small) {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .section-video {
+    background-image: url('media/images/bg-section.jpg');
+    padding: 5px 0;
+    text-align: center;
+
+    .video-list {
+      max-width: 1200px;
+      margin: 0 auto;
+
+      @media screen and (max-width: $small) {
+        max-width: 100%;
+      }
+
+      .wp-block-group__inner-container {
+        display: flex;
+        justify-content: center;
+
+        @media screen and (max-width: $small) {
+          flex-flow: column;
+
+          .wp-block-embed {
+            margin: 0 auto;
+          }
+        }
+
+        .wp-block-embed iframe {
+          width: 480px;
+          height: 270px;
+
+          @media screen and (max-width: $small) {
+            width: 320px;
+            height: 180px;
+          }
+        }
+
+        figcaption {
+          font-size: 22px;
+          text-transform: uppercase;
+          font-weight: bold;
+          text-align: center;
+          margin-top: 20px;
+        }
+      }
+    }
+
+    .wp-block-button {
+      margin: 0 auto 40px;
+      display: inline-block;
+    }
+
+    .wp-block-button .wp-block-button__link {
+      background-color: white;
+      color: $red;
+      border-radius: 0;
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      font-size: 40px;
+      line-height: 30px;
+      padding-top: 18px;
+      width: auto;
+
+      @media screen and (max-width: $small) {
+        font-size: 30px;
+        line-height: 20px;
+      }
+
+      &:hover {
+        color: white;
+        background-color: $offblack;
+
+        .fa-inverse {
+          color: $offblack;
+        }
+      }
+
+      .fa-stack {
+        font-size: 20px;
+        top: -3px;
+      }
+
+      .fa-stack-1x {
+        left: 3px;
+      }
+
+      .fa-inverse {
+        color: white;
+      }
+    }
+  }
+
+  .section-merch {
+    @media screen and (max-width: $small) {
+      padding: 5px 0 0;
+
+      .wp-block-group__inner-container {
+        padding: 0;
+      }
+    }
+
+    .merch-list .wp-block-group__inner-container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .merch-list a img {
+      padding: 35px;
+    }
+
+    .merch-list a img:hover{
+      filter: brightness(1.3) drop-shadow(0 0 20px #fff);
+    }
+
+    .wp-block-button .wp-block-button__link {
+      background-color: $red;
+      color: white;
+      border-radius: 0;
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      font-size: 40px;
+      margin: 30px auto 50px;
+      width: auto;
+      padding-top: 18px;
+
+      &:hover {
+        color: $red;
+        background-color: white;
+      }
+    }
+  }
+}
+
+.social-feed-block {
+  display: flex;
+  flex-flow: column;
+  padding-bottom: 80px;
+
+  @media screen and (max-width: $small) {
+    padding: 0;
+  }
+
+
+  #social-loading-spinner {
+    font-size: 50px;
+  }
+
+  .loading-message {
+    text-align: center;
+  }
+
+  .fa-stack {
+    position: absolute;
+    pointer-events: none;
+    transition: opacity 0.5s, transform 0.5s;
+
+    &.corner {
+      left: 5px;
+      bottom: 10px;
+      font-size: 20px;
+    }
+
+    &.middle {
+      left: 90px;
+      top: 100px;
+      opacity: 0;
+      transform: scale3d(0.3, 0.3, 0.3);
+    }
+  }
+
+  .row {
+    display: flex;
+    flex-flow: row nowrap;
+    max-width: 100%;
+    justify-content: space-between;
+
+    @media screen and (max-width: $small) {
+      flex-flow: row wrap;
+    }
+
+    &.twitter {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 10px;
+      grid-row-gap: 5px;
+
+      @media screen and (max-width: $small) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .tweet-wrap,
+    & > figure {
+      position: relative;
+    }
+  }
+
+  .instagram {
+    figure {
+      padding: 0 5px;
+      margin: 0;
+
+      @media screen and (max-width: $small) {
+        padding: 0;
+      }
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+
+      img {
+        max-width: 100%;
+        min-width: 260px;
+
+        @media screen and (max-width: $small) {
+          max-width: 170px;
+          min-width: 0;
+        }
+      }
+
+      &:hover {
+        .corner {
+          opacity: 0;
+          transform: scale3d(0.3, 0.3, 0.3);
+        }
+
+        .middle {
+          opacity: 1;
+          transform: scale3d(1, 1, 1);
+        }
+      }
+    }
+  }
+
+
+
+  .row.twitter .tweet-wrap {
+    background-color: white;
+    padding-bottom: 40px;
+
+    .fa-stack {
+      bottom: 5px;
+    }
+  }
+
+  .tweet-wrap {
+    .profile {
+      padding: 16px 16px 0;
+      display: flex;
+      flex-flow: row;
+      font-family: "Helvetica Neue", Roboto, "Segoe UI", Calibri, sans-serif;
+      color: black;
+
+      figure {
+        border-radius: 24px;
+        height: 48px;
+        width: 48px;
+        overflow: hidden;
+        margin: 0 5px 0 0;
+      }
+
+      .name {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        font-weight: bold;
+
+        a {
+          color: black;
+        }
+
+        span {
+          font-weight: normal;
+          color: rgb(101, 119, 134);
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  blockquote.twitter-tweet {
+    display: inline-block;
+    font-family: "Helvetica Neue", Roboto, "Segoe UI", Calibri, sans-serif;
+    color: black;
+    font-size: 0;
+    font-weight: bold;
+    line-height: 16px;
+    margin: 0;
+    padding: 0 16px 16px 16px;
+    max-width: none;
+
+    p {
+      font-size: 16px;
+      font-weight: normal;
+      line-height: 20px;
+      margin: 0 0 -10px;
+    }
+
+    & > a {
+      font-size: 12px;
+    }
+
+    a {
+      color: $red;
+      font-weight: normal;
+      outline: 0 none;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+
+      &:last-child {
+        display: block;
+      }
+    }
+  }
+}
