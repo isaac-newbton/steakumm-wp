@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
         autoHeight: true,
         navSpeed: 600,
         autoplay: true,
-        autoplayTimeout: 12000,
+        autoplayTimeout: 10500,
         autoplayHoverPause: true,
         onInitialized: initVids,
         onTranslated: playVid,
