@@ -38,6 +38,7 @@ function initVids(evt) {
 
 document.addEventListener('DOMContentLoaded', () => {
     $('#homepage-videos').owlCarousel({
+        loop: true,
         items: 1,
         autoHeight: true,
         navSpeed: 600,
