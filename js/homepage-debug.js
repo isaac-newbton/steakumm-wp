@@ -38,12 +38,13 @@ function initVids(evt) {
 
 document.addEventListener('DOMContentLoaded', () => {
     $('#homepage-videos').owlCarousel({
+        rewind: true,
+        loop: false,
         items: 1,
         autoHeight: true,
         navSpeed: 600,
         onInitialized: initVids,
         onTranslated: playVid,
-        rewind: true
     });
 
     const owlOpt = {
