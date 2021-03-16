@@ -3,17 +3,19 @@ function playVid(evt) {
         el.pause();
         el.currentTime = 0;
     });
-    evt.target.querySelectorAll('#homepage-videos .owl-item.active video').forEach( (el) => {
-        if (mobile()) {
-            if (el.classList.contains('mobile-only')) {
-               el.play();
+    if(evt.target.querySelectorAll('#homepage-videos .owl-item.active video')){
+        evt.target.querySelectorAll('#homepage-videos .owl-item.active video').forEach( (el) => {
+            if (mobile()) {
+                if (el.classList.contains('mobile-only')) {
+                el.play();
+                }
+            } else {
+                if (el.classList.contains('desktop-only')) {
+                el.play();
+                }
             }
-        } else {
-            if (el.classList.contains('desktop-only')) {
-               el.play();
-            }
-        }
-    });
+        });
+    }
 }
 
 function initVids(evt) {
