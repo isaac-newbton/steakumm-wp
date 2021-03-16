@@ -4,8 +4,7 @@ function playVid(evt) {
         el.currentTime = 0;
     });
     let nodes = evt.target.querySelectorAll('#homepage-videos .owl-item.active video');
-    console.log(nodes);
-    if(nodes){
+    if(nodes.length > 0){
         nodes.forEach( (el) => {
             if (mobile()) {
                 if (el.classList.contains('mobile-only')) {
