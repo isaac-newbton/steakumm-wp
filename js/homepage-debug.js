@@ -3,8 +3,10 @@ function playVid(evt) {
         el.pause();
         el.currentTime = 0;
     });
-    if(evt.target.querySelectorAll('#homepage-videos .owl-item.active video')){
-        evt.target.querySelectorAll('#homepage-videos .owl-item.active video').forEach( (el) => {
+    let nodes = evt.target.querySelectorAll('#homepage-videos .owl-item.active video');
+    console.log(nodes);
+    if(nodes){
+        evt.target.querySelectorAll(nodes).forEach( (el) => {
             if (mobile()) {
                 if (el.classList.contains('mobile-only')) {
                 el.play();
