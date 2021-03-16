@@ -6,7 +6,7 @@ function playVid(evt) {
     let nodes = evt.target.querySelectorAll('#homepage-videos .owl-item.active video');
     console.log(nodes);
     if(nodes){
-        evt.target.querySelectorAll(nodes).forEach( (el) => {
+        nodes.forEach( (el) => {
             if (mobile()) {
                 if (el.classList.contains('mobile-only')) {
                 el.play();
