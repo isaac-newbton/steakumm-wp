@@ -1,11 +1,15 @@
 function playVid(evt) {
-    evt.target.querySelectorAll('#homepage-videos .owl-item video').forEach( (el) => {
-        el.pause();
-        el.currentTime = 0;
-    });
+    let videos = evt.target.querySelectorAll('#homepage-videos .owl-item video');
+    if(videos.length > 0){
+        videos.forEach( (el) => {
+            el.pause();
+            el.currentTime = 0;
+        });
+    }
     let nodes = evt.target.querySelectorAll('#homepage-videos .owl-item.active video');
     if(nodes.length > 0){
         nodes.forEach( (el) => {
+            console.log(el);
             if (mobile()) {
                 if (el.classList.contains('mobile-only')) {
                 el.play();
@@ -42,7 +46,8 @@ function initVids(evt) {
 document.addEventListener('DOMContentLoaded', () => {
     $('#homepage-videos').owlCarousel({
         rewind: true,
-        loop: false,
+        navRewind: true,
+        rewindNav: true,
         items: 1,
         autoHeight: true,
         navSpeed: 600,
