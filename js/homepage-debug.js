@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
         autoHeight: true,
         navSpeed: 600,
         autoplay: true,
-        autoplayTimeout: 10000,
+        autoplayTimeout: 12000,
         autoplayHoverPause: true,
         onInitialized: initVids,
         onTranslated: playVid,
