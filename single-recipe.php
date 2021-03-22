@@ -11,9 +11,15 @@ get_header();
 ?>
 
     <main id="primary" class="site-main container">
-        <?php while ( have_posts() ) : the_post(); ?>
+        <?php while ( have_posts() ) : the_post(); $video_url = get_field('video_url'); ?>
         <div class="recipe-img">
-            <figure><img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>"></figure>
+            <figure>
+                <?php if($video_url): ?>
+                    <video src="<?=$video_url?>" autoplay loop controlslist="nodownload" preload="metadata" poster="<?=get_the_post_thumbnail_url()?>"></video>
+                <?php else: ?>
+                    <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
+                <?php endif; ?>
+            </figure>
             <div class="related-product noprint">
                 <?php $prod = get_field('related_product'); ?>
                 <figure>
