@@ -154,6 +154,10 @@ function steak_umm_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+    if(is_singular('recipe')) {
+        wp_enqueue_script('recipe-video', get_template_directory_uri() . '/js/recipe-video.js', [], '1.0.0', true);
+    }
 }
 add_action( 'wp_enqueue_scripts', 'steak_umm_scripts' );
 

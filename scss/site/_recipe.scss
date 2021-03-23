@@ -37,6 +37,7 @@
       border-radius: 20px;
       overflow: hidden;
       width: 650px;
+      position: relative;
 
       @media screen and (max-width: $small) {
         width: 100%;
@@ -49,6 +50,45 @@
 
       @media print {
         width: 400px;
+      }
+
+      #play-recipe-video {
+        position: absolute;
+        z-index: 999999;
+        text-align: center;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        outline: none;
+        border: 8px solid white;
+        background-color: rgba(0,0,0,0.5);
+        color: white;
+        border-radius: 50%;
+        width: 6rem;
+        height: 6rem;
+        font-size: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        visibility: hidden;
+
+        svg {
+          position: relative;
+          left: 0.125rem;
+        }
+
+        &:hover, &:focus {
+          color: black;
+          border-color: white;
+          background-color: white;
+          box-shadow: 0 2px 24px rgba(0,0,0,0.95);
+        }
+
+        &:focus {
+          outline: 2px dotted white;
+          outline-offset: 2px;
+        }
       }
     }
 

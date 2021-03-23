@@ -15,7 +15,8 @@ get_header();
         <div class="recipe-img">
             <figure>
                 <?php if($video_url): ?>
-                    <video id="recipe-video" src="<?=$video_url?>" autoplay loop controls controlslist="nodownload" preload="metadata" poster="<?=get_the_post_thumbnail_url()?>"></video>
+                    <video id="recipe-video" src="<?=$video_url?>" loop controls controlslist="nodownload" preload="metadata" poster="<?=get_the_post_thumbnail_url()?>"></video>
+                    <button type="button" id="play-recipe-video"><i class="fa fa-play"></i></button>
                 <?php else: ?>
                     <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
                 <?php endif; ?>
