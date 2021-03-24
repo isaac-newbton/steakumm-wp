@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     postDom += "<div class='profile'><figure><a href='https://twitter.com/" + data[1].account.name + "'><img src='" + data[1].account.profile_pic +"' alt='Profile Picture'></a></figure><div class='name'>";
                     postDom += "<a href='https://twitter.com/" + data[1].account.name + "'>" + data[1].account.full_name + '</a>';
                     postDom += "<span>@" + data[1].account.name + '</span>';
-                    postDom += "</div></div>" + post.html;
+                    postDom += "</div></div>" + decodeURI(post.html);
                     postDom += '<span class="corner fa-stack fa-2x"><i class="fas fa-circle fa-stack-2x"></i><i class="fab fa-twitter fa-stack-1x fa-inverse"></i></span></div></div>';
                 }
                 postDom += "</div>";
